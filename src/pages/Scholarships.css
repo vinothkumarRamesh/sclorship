@@ -1,0 +1,155 @@
+.scholarships-page {
+  padding-bottom: 80px;
+}
+
+.page-header {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin-bottom: 8px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 32px auto 0;
+  padding: 8px 8px 8px 24px;
+  border-radius: 40px;
+}
+
+.search-icon {
+  color: var(--text-muted);
+  margin-right: 12px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.1rem;
+  font-family: var(--font-main);
+  color: var(--text-main);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-bar .btn {
+  border-radius: 30px;
+  padding: 12px 32px;
+}
+
+.layout-grid {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.filters-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  padding: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.filters-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filters-header h3 {
+  margin: 0;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group h4 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.results-main {
+  flex: 1;
+  min-width: 0; /* Prevents flex children from overflowing */
+}
+
+.results-header {
+  margin-bottom: 24px;
+}
+
+.list-view {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.page-numbers {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.page-num {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glass-border);
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-weight: 500;
+  color: var(--text-main);
+  transition: all 0.3s;
+}
+
+.page-num:hover {
+  background: rgba(10, 37, 64, 0.05);
+}
+
+.page-num.active {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.page-ellipsis {
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .layout-grid {
+    flex-direction: column;
+  }
+  
+  .filters-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
